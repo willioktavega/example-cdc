@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  postgres:
+    image: postgres:9.6
+    hostname: postgres
+    container_name: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      # - ./postgresql:/var/lib/postgresql/data
+      - ./deps:/deps
+ 
